@@ -1,0 +1,28 @@
+@import '../../styles/colors';
+
+.container {
+  padding: 1rem;
+  background-color: $porcelain;
+}
+
+.content {
+  align-items: center;
+  display: grid;
+  font-size: 0.85rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 240px));
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.contact-container {
+  color: $cornflower-blue;
+  font-weight: 700;
+}
+
+.date {
+  color: $gray-chateau;
+}
+
+.link {
+  text-decoration: none;
+}

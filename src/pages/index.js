@@ -1,18 +1,19 @@
-import React from "react"
+import React from 'react';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/hero"
-import Content from "../components/content"
-import CallToAction from "../components/cta"
+import Hero from '@components/Hero';
+import Layout from '@components/Layout';
+import SEO from '@components/seo';
+import Content from '@components/Content';
+import CallToAction from '@components/CallToAction';
 
 const IndexPage = () => (
   <Layout>
+    {/* eslint-disable-next-line react/jsx-pascal-case */}
     <SEO />
     <Hero />
     <Content />
     <CallToAction />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

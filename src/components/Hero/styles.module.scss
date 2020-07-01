@@ -1,0 +1,41 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 1rem;
+}
+
+.header-image {
+  background-image: url('../../images/header.png');
+  height: 100vh;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -5;
+}
+
+.title {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  max-width: 440;
+}
+
+.content {
+  margin: 60;
+  position: relative;
+  width: 250px;
+}
+
+.content-container {
+  clip-path: inset(2% 5% round 2% 5%);
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
