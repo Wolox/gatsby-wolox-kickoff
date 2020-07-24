@@ -1,36 +1,51 @@
 const path = require('path');
 
 module.exports = {
+  // TODO: Change site metadate for you project
   siteMetadata: {
-    title: 'Starter Landing Page',
-    description: 'A barebone landing page starter with some minimal styles.',
-    author: '@gillkyle',
-    siteUrl: 'https://gatsby-starter-landing-page.netlify.com'
+    title: 'Project Name',
+    description: 'Project description',
+    siteUrl: 'https://github.com/btahir/gatsby-landing-page-starter',
+    author: '@damfinkel'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        includePaths: ['src/scss', 'src']
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'assets',
+        path: `${__dirname}/src/assets`
+      }
+    },
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
         '@components': path.join(__dirname, 'src/components')
       }
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-manifest',
+      /* eslint-disable camelcase */
       options: {
-        trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID'
+        name: 'Project Name',
+        short_name: 'Short Project Name',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#675CE2',
+        display: 'standalone',
+        icon: 'src/assets/logo.svg'
       }
+      /* eslint-enable camelcase */
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images`
-      }
-    }
+    'gatsby-plugin-offline',
+    'gatsby-plugin-sitemap'
   ]
 };

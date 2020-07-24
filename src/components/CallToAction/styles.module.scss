@@ -1,4 +1,13 @@
-.container {
-  padding: 4rem 1rem;
+@import 'base/variables';
+
+.cta {
+  background-color: $cta-background-color;
   text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
 }
