@@ -1,18 +1,17 @@
 import React from 'react';
 
-import Button from '../Button';
-import SectionHeader from '../SectionHeader';
-
 import styles from './styles.module.scss';
 
-const CallToAction = () => (
-  <div className={styles.container}>
-    <SectionHeader
-      title="Stay Updated"
-      description="Give a final call to action because that's what the cool kids are doing."
-    />
-    <Button>Get Early Access</Button>
-  </div>
-);
+function CallToAction() {
+  return (
+    <section className={styles.cta}>
+      <h1>Try our awesome product.</h1>
+      <p>There&apos;s nothing to lose. 30 days free trial.</p>
+      <button type="button" className="button">
+        Get Started
+      </button>
+    </section>
+  );
+}
 
 export default CallToAction;

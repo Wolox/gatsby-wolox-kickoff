@@ -1,29 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 
 import styles from './styles.module.scss';
 
-const Footer = ({ siteTitle }) => (
-  <footer className={styles.container}>
-    <div className={styles.content}>
-      <div className={styles.contactContainer}>
-        <a className={styles.link} href="https://github.com/gillkyle/gatsby-starter-landing-page">
-          Contact Us
-        </a>
+function Footer({ siteTitle }) {
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.footerBelt}>
+        <div className={styles.companySign}>&copy; 2020 {siteTitle}</div>
+        <div className={styles.socialMedia}>
+          <a href="https://www.facebook.com">
+            <div className={styles.socialFacebook}>Facebook</div>
+          </a>
+          <a href="https://www.twitter.com">
+            <div className={styles.socialTwitter}>Twitter</div>
+          </a>
+          <a href="https://www.instagram.com">
+            <div className={styles.socialInstagram}>Instagram</div>
+          </a>
+        </div>
       </div>
-      <div className={styles.date}>
-        © {new Date().getFullYear()} {siteTitle}
-      </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+}
 
 Footer.propTypes = {
-  siteTitle: PropTypes.string
-};
-
-Footer.defaultProps = {
-  siteTitle: ''
+  siteTitle: string.isRequired
 };
 
 export default Footer;

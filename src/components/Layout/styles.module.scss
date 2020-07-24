@@ -1,3 +1,15 @@
+@import 'base/variables';
+
 .container {
-  padding: 0 1rem;
+  background-color: $container-background-color;
+  height: 100%;
+  position: absolute;
+  top: 8vh;
+  left: 0;
+  right: 0;
+}
+
+.container-main {
+  background-color: inherit;
+  margin: 0 auto;
 }

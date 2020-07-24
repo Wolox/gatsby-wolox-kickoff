@@ -1,19 +1,27 @@
 import React from 'react';
 
-import Hero from '@components/Hero';
-import Layout from '@components/Layout';
-import SEO from '@components/seo';
-import Content from '@components/Content';
-import CallToAction from '@components/CallToAction';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import ValueProp from '../components/ValueProp';
+import SocialProof from '../components/SocialProof';
+import ProductBenefits from '../components/ProductBenefits';
+import ProductFeatures from '../components/ProductFeatures';
+import Testimonials from '../components/Testimonials';
+import CallToAction from '../components/CallToAction';
 
-const IndexPage = () => (
-  <Layout>
-    {/* eslint-disable-next-line react/jsx-pascal-case */}
-    <SEO />
-    <Hero />
-    <Content />
-    <CallToAction />
-  </Layout>
-);
+function IndexPage() {
+  return (
+    <Layout>
+      {/* eslint-disable-next-line react/jsx-pascal-case */}
+      <SEO title="Home" />
+      <ValueProp />
+      <SocialProof />
+      <ProductBenefits />
+      <ProductFeatures />
+      <Testimonials />
+      <CallToAction />
+    </Layout>
+  );
+}
 
 export default IndexPage;

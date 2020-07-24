@@ -4,10 +4,11 @@ module.exports = {
     'selector-max-type': 2,
     'max-line-length': 120,
     'declaration-property-unit-blacklist': null,
+    'declaration-property-unit-whitelist': null,
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['if', 'for', 'extend', 'mixin', 'include', 'function', 'return']
+        ignoreAtRules: ['if', 'for', 'extend', 'mixin', 'include', 'function', 'return', 'else']
       }
     ],
     'scss/no-duplicate-dollar-variables': [
